@@ -211,7 +211,8 @@
         }
 
         //function for drawing polygons
-        function polygon(ctx, x, y, radius, sides, startAngle, anticlockwise) {
+        function polygon(ctx, x, y, radius, sides, startAngle, anticlockwise) 
+	{
             if (sides < 3) return;
             var a = (Math.PI * 2) / sides;
             a = anticlockwise ? -a : a;
@@ -225,15 +226,7 @@
             ctx.closePath();
             ctx.restore();
         }
-            // end of the math, do the drawing
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.lineTo(c.x, c.y);
-            ctx.closePath();
-            ctx.stroke();
-        }
+		
         //function for clearing canvas
         function Clear() {
             var c = document.getElementById("myCanvas");
